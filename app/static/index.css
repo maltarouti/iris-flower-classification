@@ -1,0 +1,21 @@
+body{
+    background-color: #adaaaa;
+}
+
+h1, p{
+    color:black;
+}
+
+input{
+    margin-bottom: 6px;
+}
+
+
+.vertical-center {
+    margin:0 auto;
+    margin-top: 24px;
+    margin-bottom: 12px;
+    padding-top: 6px;
+    padding-bottom:3px;
+    width: 80%;
+  }

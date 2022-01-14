@@ -1,0 +1,77 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iris Flower Classification</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="/static/index.css">
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="/">Iris Flower Classification</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="https://github.com/Murtada-Altarouti" target='_blank'>GitHub</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://www.linkedin.com/in/murtada-altarouti" target='_blank'>linkedin</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://www.udacity.com/" target='_blank'>Udacity</a>
+            </li>  
+          </ul>
+        </div>
+      </nav>
+      
+
+      <div class="container container-theme">
+            <div class="jumbotron vertical-center">
+                <h1>Iris Flower Classification</h1>
+            <p>
+                This is a simple web application that uses machine learning to classify iris flowers.
+                The application uses the <a href="https://scikit-learn.org/" target='_blank'>sklearn</a> library to prepare the data and train the model.
+                The model is trained using the <a href="https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LogisticRegression.html" target='_blank'>Logistic Regression</a> algorithm on the <a href="https://www.kaggle.com/arshid/iris-flower-datasets" target='_blank'>Iris Flower Dataset</a>.              
+            </p>
+                
+                {% with messages = get_flashed_messages() %} 
+                    {% if messages %}
+                        {% for message in messages %}
+                        <div class="alert alert-success" role="alert">
+                            {{ message }}
+                        </div>
+                        {% endfor %}
+                    {% endif %}
+                {% endwith %}
+
+                <form method="POST" action="/predict"> 
+                    <label for="sepal_length"> Sepal Length (cm):</label>
+                    <input type="text" id="sepal_length" name="sepal_length" placeholder="Sepal Length" class="form-control" required>
+                    
+                    <label for="sepal_width"> Sepal Length (cm):</label>
+                    <input type="text" id="sepal_width" name="sepal_width" placeholder="Sepal Width" class="form-control" required>
+
+                    <label for="petal_length"> Sepal Length (cm):</label>
+                    <input type="text" id="petal_length" name="petal_length" placeholder="Petal Length" class="form-control" required>
+
+                    <label for="petal_width"> Sepal Length (cm):</label>
+                    <input type="text" id="petal_width" name="petal_width" placeholder="Petal Width" class="form-control" required>
+                    <button type="submit" class="btn btn-primary">Predict</button>
+
+                </form>        
+            </div>
+      </div>
+
+      
+      
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+</html>
