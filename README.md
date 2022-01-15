@@ -46,7 +46,7 @@ The chart also shows that Virginica has the longest sepal length which may reach
 
 <a id=machine_learning_model></a>
 ## 3. Machine Learning Model 📜
-The machine learning model was trained on the Iris flower dataset using The [scikit learn](https://scikit-learn.org/stable/) Python library. The model is [Logistic Regression](https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LogisticRegression.html), which is an excellent classifier since it applies the one-vs-rest principle to this multi-class situation.
+The machine learning model was trained on the Iris flower dataset using The [scikit learn](https://scikit-learn.org/stable/) Python library. The model is [Logistic Regression](https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LogisticRegression.html), which is an excellent classifier since it applies the one-vs-rest principle to this multi-class situation. We also used the (accuracy score)[https://scikit-learn.org/stable/modules/generated/sklearn.metrics.accuracy_score.html] metrics was used to calculate the model accuracy in general 
 
 <a id=flask_web_app></a>
 ## 4. Flask Web App 🌐
@@ -108,7 +108,7 @@ The link of the website will be `0.0.0.0:3001`
 
 <a id=conclusion></a>
 ## 8. Conclusion 👋
-We conclude that it may be difficult for non-experts to identify iris flower species, machine learning makes it much easier to find out the flower class with 94 percent accuracy. In the future, we can try to develop a deep learning model utilizing neural networks, which may yield even better and more accurate results.
+We conclude that it may be difficult for non-experts to identify iris flower species, machine learning makes it much easier to find out the flower class with 94% accuracy. In the future, we can try to develop a deep learning model utilizing neural networks, which may yield even better and more accurate results. Also, feel free to fork this repositry and try to improve the solution. 
 
 <a id=acknowledgements></a>
 ## 9. Acknowledgements ❤️
