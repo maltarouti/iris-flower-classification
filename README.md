@@ -32,11 +32,11 @@ In this project, we will analyze the iris flower dataset, which has three specie
 ![image](https://github.com/Murtada-Altarouti/Iris-flower-classification/blob/main/images/flower.jpg)
 
 <a id=problem_statement></a>
-## 2. Problem Statement 
+## 2. Problem Statement 📌
 Identifying Iris Flowers by eyes and especially for non-experts is a difficult job, but machine learning algorithms make it much easier to classify any flower with high accuracy. This is a classification problem which the model attempts to determine if the flower was Setosa, Versicolor, or Virginica. In this project, we are going to use [Logistic Regression](https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LogisticRegression.html) from the scikit-learn library.
 
 <a id=metrics></a>
-## 3. Metrics
+## 3. Metrics 🧮
 In the evaluation process, we are going to use the accuracy score metrics to get an overview on the model performance, which is the number of correctly classified data instances over the total number of data instances.
 
 ![image](https://github.com/Murtada-Altarouti/Iris-flower-classification/blob/main/images/formula.png)
@@ -67,11 +67,11 @@ The chart also shows that Virginica has the longest sepal length which may reach
 The machine learning model was trained on the Iris flower dataset using The [scikit learn](https://scikit-learn.org/stable/) Python library. The model is [Logistic Regression](https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LogisticRegression.html), which is an excellent classifier since it applies the one-vs-rest principle to this multi-class situation. We also used the [accuracy score](https://scikit-learn.org/stable/modules/generated/sklearn.metrics.accuracy_score.html) metrics to calculate the model accuracy in general 
 
 <a id=data_preprocessing></a>
-### A. Data Preprocessing
+### A. Data Preprocessing 🗃️
 The data preprocessing was done inside the `/data/process_data.ipynb` using Pandas library. There was only one step which is encoding the classes from strings to numbers since computers deal with numbers better than anything.
 
 <a id=implementation></a>
-### B. Implementation
+### B. Implementation 📋
 The implementation of algorthims and techniques was done by using the [scikit-learn](https://scikit-learn.org/) library. This procedure consists of five phases, which are as follows: 
    i. Loading the data as a pandas dataframe from the database
    ii. Spliting the dataset to train and test using [train test split](https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.train_test_split.html) function
@@ -80,7 +80,7 @@ The implementation of algorthims and techniques was done by using the [scikit-le
    v. Saving the model as a pickle file 
 
 <a id=refinement></a>
-### C. refinement
+### C. refinement 📡
 In this project, GridSearchCV was used which is an exhaustve search over specified parameter values for an estimator. The following are the hyperparameters that was given to the grid search:
 ```python
  parameters = {
@@ -92,17 +92,17 @@ In this project, GridSearchCV was used which is an exhaustve search over specifi
 ```
 
 <a id=results></a>
-## 6. Results
+## 6. Results 🏁
 
 <a id=evaluation></a>
-### A. Model Evaluation and Validation
+### A. Model Evaluation and Validation 🪄
 The model evaluation was calculated using the [accuracy score](https://scikit-learn.org/stable/modules/generated/sklearn.metrics.accuracy_score.html?highlight=accuracy%20score#sklearn.metrics.accuracy_score) and the GridSearchCV identified the following as the optimal hyperparameters for which the model achieved a 96% accuracy score.
 ```python
 Best parameters: {'C': 10, 'max_iter': 100, 'penalty': 'l2', 'solver': 'lbfgs'}
 ```
 
 <a id=justification></a>
-### B. Justification
+### B. Justification 🖊️
 In this project, the grid search was the only strategy used, and we received a high accuracy with the best parameters.
 
 <a id=flask_web_app></a>
