@@ -72,12 +72,12 @@ The data preprocessing was done inside the `/data/process_data.ipynb` using Pand
 
 <a id=implementation></a>
 ### B. Implementation 📋
-The implementation of algorthims and techniques was done by using the [scikit-learn](https://scikit-learn.org/) library. This procedure consists of five phases, which are as follows: 
-   i. Loading the data as a pandas dataframe from the database
-   ii. Spliting the dataset to train and test using [train test split](https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.train_test_split.html) function
-   iii. building and training the logistic regression model
-   iv. Evaluating the model using the [accuracy score](https://scikit-learn.org/stable/modules/generated/sklearn.metrics.accuracy_score.html?highlight=accuracy%20score#sklearn.metrics.accuracy_score)
-   v. Saving the model as a pickle file 
+The implementation of algorthims and techniques was done by using the [scikit-learn](https://scikit-learn.org/) library. This procedure consists of five phases, which are as follows:
+* Loading the data as a pandas dataframe from the database
+* Spliting the dataset to train and test using [train test split](https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.train_test_split.html) function
+* building and training the logistic regression model
+* Evaluating the model using the [accuracy score](https://scikit-learn.org/stable/modules/generated/sklearn.metrics.accuracy_score.html?highlight=accuracy%20score#sklearn.metrics.accuracy_score)
+* Saving the model as a pickle file 
 
 <a id=refinement></a>
 ### C. refinement 📡
