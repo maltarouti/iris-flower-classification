@@ -2,10 +2,12 @@
 
 ## Table of Content 📕
 * [1. Project Overview](#project_overview)
-* [2. The Iris Flower Dataset](#the_iris_flower_dataset)
+* [2. Problem Statement](#problem_statement)
+* [3. Metrics](#metrics)
+* [4. The Iris Flower Dataset](#the_iris_flower_dataset)
     * [A. Dataset Source](#dataset_source)
     * [B. Data Exploration and Data Visualization](#data_exploration_and_data_visualization)
-* [3. Machine Learning Model](#machine_learning_model)
+* [5. Methodology](#Methodology)
 * [4. Flask Web App](#flask_web_app)
 * [5. Files Structure](#files_structure)
 * [6. Requirments](#requirments)
@@ -23,17 +25,18 @@ In this project, we will analyze the iris flower dataset, which has three specie
 
 ![image](https://github.com/Murtada-Altarouti/Iris-flower-classification/blob/main/images/flower.jpg)
 
+<a id=problem_statement></a>
 ## 2. Problem Statement 
 Identifying Iris Flowers by eyes and especially for non-experts is a difficult job, but machine learning algorithms make it much easier to classify any flower with high accuracy. This is a classification problem which the model attempts to determine if the flower was Setosa, Versicolor, or Virginica. In this project, we are going to use [Logistic Regression](https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LogisticRegression.html) from the scikit-learn library.
 
+<a id=metrics></a>
 ## 3. Metrics
 In the evaluation process, we are going to use the accuracy score metrics to get an overview on the model performance, which is the number of correctly classified data instances over the total number of data instances.
 
 ![image](https://github.com/Murtada-Altarouti/Iris-flower-classification/blob/main/images/formula.png)
 
-
 <a id=the_iris_flower_dataset></a>
-## 2. The Iris Flower Dataset 🌸
+## 4. The Iris Flower Dataset 🌸
 
 <a id=dataset_source></a>
 ### A. Dataset Source 📋
@@ -53,8 +56,8 @@ As it shown above, the sepal range is between 4.3cm and 7.9cm in length and 2.0c
 
 The chart also shows that Virginica has the longest sepal length which may reach 7.9cm, as opposed to Setosa, which has a range of 4.3cm to 5.8cm. On the other hand, Setosa has the widest sepals at 4.4cm and Virginica has the highest petal length and width.
 
-<a id=machine_learning_model></a>
-## 3. Methodology 📜
+<a id=Methodology></a>
+## 5. Methodology 📜
 The machine learning model was trained on the Iris flower dataset using The [scikit learn](https://scikit-learn.org/stable/) Python library. The model is [Logistic Regression](https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LogisticRegression.html), which is an excellent classifier since it applies the one-vs-rest principle to this multi-class situation. We also used the [accuracy score](https://scikit-learn.org/stable/modules/generated/sklearn.metrics.accuracy_score.html) metrics to calculate the model accuracy in general 
 
 ### A. Data Preprocessing
@@ -69,7 +72,7 @@ The implementation of algorthims and techniques was done by using the [scikit-le
    v. Saving the model as a pickle file 
 
 ### C. Refinement
-In this project, GridSearchCV was used which is an exhaustve search over specified parameter values for an estimator. The following are the hyperparameters that was givento the grid search:
+In this project, GridSearchCV was used which is an exhaustve search over specified parameter values for an estimator. The following are the hyperparameters that was given to the grid search:
 ```python
  parameters = {
      'C': [0.1, 1, 10, 100],
@@ -78,27 +81,24 @@ In this project, GridSearchCV was used which is an exhaustve search over specifi
      'max_iter': [100, 500]
  }
 ```
-The GridSearchCV found the following as the best hyperparameters where the model has reached 96% accuracy score
+
+## 6. Results
+### A. Model Evaluation and Validation
+The model evaluation was calculated using the [accuracy score](https://scikit-learn.org/stable/modules/generated/sklearn.metrics.accuracy_score.html?highlight=accuracy%20score#sklearn.metrics.accuracy_score) and the GridSearchCV identified the following as the optimal hyperparameters for which the model achieved a 96% accuracy score.
 ```python
 Best parameters: {'C': 10, 'max_iter': 100, 'penalty': 'l2', 'solver': 'lbfgs'}
 ```
 
-
-
-## n. Results
-### A. Model Evaluation and Validation
-...
-
 ### B. Justification
-...
+In this project, the grid search was the only strategy used, and we received a high accuracy with the best parameters.
 
 <a id=flask_web_app></a>
-## 4. Flask Web App 🌐
+## 7. Flask Web App 🌐
 The Flask Web App allows the user to use the trained model to make predictions on new flowers and find their species easily
 ![image](https://github.com/Murtada-Altarouti/Iris-flower-classification/blob/main/images/webapp.png)
 
 <a id=files_structure></a>
-## 5. Files Structure 📁
+## 8. Files Structure 📁
 ```
 ├── app #Website folder
 │   ├── app.py #Responsible of running the website
@@ -123,13 +123,13 @@ The Flask Web App allows the user to use the trained model to make predictions o
 ```
 
 <a id=requirments></a>
-## 6. Requirments 📑
+## 9. Requirments 📑
 In order to to run this project, you must have [Python3](https://www.python.org/) installed on your machine. You also must have all listed libraries inside the `requirments.txt` so run the following command to install them: 
 ```
 pip3 install -r requirments.txt
 ```
 <a id=running_process></a>
-## 7. Running Process ⏯️
+## 10. Running Process ⏯️
 This secions explains how to run each part of this project using the command prompt or terminal
 
 <a id=process_data></a>
@@ -151,9 +151,9 @@ python3 app.py
 The link of the website will be `0.0.0.0:3001`
 
 <a id=conclusion></a>
-## 8. Conclusion 👋
+## 11. Conclusion 👋
 We conclude that it may be difficult for non-experts to identify iris flower species, machine learning makes it much easier to find out the flower class with 96% accuracy. In the future, we can try to develop a deep learning model utilizing neural networks, which may yield even better and more accurate results. Also, feel free to fork this repositry and try to improve the solution. 
 
 <a id=acknowledgements></a>
-## 9. Acknowledgements ❤️
+## 12. Acknowledgements ❤️
 I would like to express my appreciation to [Misk Academy](https://misk.org.sa/en/) and [Udacity](https://www.udacity.com/) for the amazing work on the data science course and the support they give us to build this project
