@@ -7,16 +7,22 @@
 * [4. The Iris Flower Dataset](#the_iris_flower_dataset)
     * [A. Dataset Source](#dataset_source)
     * [B. Data Exploration and Data Visualization](#data_exploration_and_data_visualization)
-* [5. Methodology](#Methodology)
-* [4. Flask Web App](#flask_web_app)
-* [5. Files Structure](#files_structure)
-* [6. Requirments](#requirments)
-* [7. Running Process](#running_process)
+* [5. Methodology](#methodology)
+   * [A. Data Preprocessing](#data_preprocessing)
+   * [B. Implementation](#implementation)
+   * [C. Refinement](#refinement)
+* [6. Results](#results)
+   * [Model Evaluation and Validation](#evaluation)
+   * [Justification](#justification)
+* [7. Flask Web App](#flask_web_app)
+* [8. Files Structure](#files_structure)
+* [9. Requirments](#requirments)
+* [10. Running Process](#running_process)
     * [A. Process Data](#process_data)
     * [B. Training the classifier](#training_the_classifier)
     * [C. Run the Flask Web App](#run_the_flask_web_app)
-* [8. Conclusion](#conclusion)
-* [9. Acknowledgements](#acknowledgements)
+* [11. Conclusion](#conclusion)
+* [12. Acknowledgements](#acknowledgements)
 
 ***
 <a id=project_overview></a>
@@ -60,9 +66,11 @@ The chart also shows that Virginica has the longest sepal length which may reach
 ## 5. Methodology 📜
 The machine learning model was trained on the Iris flower dataset using The [scikit learn](https://scikit-learn.org/stable/) Python library. The model is [Logistic Regression](https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LogisticRegression.html), which is an excellent classifier since it applies the one-vs-rest principle to this multi-class situation. We also used the [accuracy score](https://scikit-learn.org/stable/modules/generated/sklearn.metrics.accuracy_score.html) metrics to calculate the model accuracy in general 
 
+<a id=data_preprocessing></a>
 ### A. Data Preprocessing
 The data preprocessing was done inside the `/data/process_data.ipynb` using Pandas library. There was only one step which is encoding the classes from strings to numbers since computers deal with numbers better than anything.
 
+<a id=implementation></a>
 ### B. Implementation
 The implementation of algorthims and techniques was done by using the [scikit-learn](https://scikit-learn.org/) library. This procedure consists of five phases, which are as follows: 
    i. Loading the data as a pandas dataframe from the database
@@ -71,7 +79,8 @@ The implementation of algorthims and techniques was done by using the [scikit-le
    iv. Evaluating the model using the [accuracy score](https://scikit-learn.org/stable/modules/generated/sklearn.metrics.accuracy_score.html?highlight=accuracy%20score#sklearn.metrics.accuracy_score)
    v. Saving the model as a pickle file 
 
-### C. Refinement
+<a id=refinement></a>
+### C. refinement
 In this project, GridSearchCV was used which is an exhaustve search over specified parameter values for an estimator. The following are the hyperparameters that was given to the grid search:
 ```python
  parameters = {
@@ -82,13 +91,17 @@ In this project, GridSearchCV was used which is an exhaustve search over specifi
  }
 ```
 
+<a id=results></a>
 ## 6. Results
+
+<a id=evaluation></a>
 ### A. Model Evaluation and Validation
 The model evaluation was calculated using the [accuracy score](https://scikit-learn.org/stable/modules/generated/sklearn.metrics.accuracy_score.html?highlight=accuracy%20score#sklearn.metrics.accuracy_score) and the GridSearchCV identified the following as the optimal hyperparameters for which the model achieved a 96% accuracy score.
 ```python
 Best parameters: {'C': 10, 'max_iter': 100, 'penalty': 'l2', 'solver': 'lbfgs'}
 ```
 
+<a id=justification></a>
 ### B. Justification
 In this project, the grid search was the only strategy used, and we received a high accuracy with the best parameters.
 
