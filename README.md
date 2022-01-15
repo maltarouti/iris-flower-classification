@@ -80,7 +80,7 @@ The implementation of algorthims and techniques was done by using the [scikit-le
 * Saving the model as a pickle file 
 
 <a id=refinement></a>
-### C. refinement 📡
+### C. Refinement 📡
 In this project, GridSearchCV was used which is an exhaustve search over specified parameter values for an estimator. The following are the hyperparameters that was given to the grid search:
 ```python
  parameters = {
