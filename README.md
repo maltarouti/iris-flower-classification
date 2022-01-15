@@ -1,20 +1,20 @@
 # Iris Flower Classification 🌸
 
 ## Table of Content:
-* [1. Project Overview](project_overview)
-* [2. The Iris Flower Dataset](the_iris_flower_dataset)
-    * [A. Dataset Source](dataset_source)
-    * [B. Data Exploration and Data Visualization](data_exploration_and_data_visualization)
-* [3. Machine Learning Model](machine_learning_model)
-* [4. Flask Web App](flask_web_app)
-* [5. Files Structure](files_structure)
-* [6. Requirments](requirments)
-* [7. Running Process](running_process)
-    * [A. Process Data](process_data)
-    * [B. Training the classifier](training_the_classifier)
-    * [C. Run the Flask Web App](run_the_flask_web_app)
-* [8. Conclusion](conclusion)
-* [9. Acknowledgements](acknowledgements)
+* [1. Project Overview](#project_overview)
+* [2. The Iris Flower Dataset](#the_iris_flower_dataset)
+    * [A. Dataset Source](#dataset_source)
+    * [B. Data Exploration and Data Visualization](#data_exploration_and_data_visualization)
+* [3. Machine Learning Model](#machine_learning_model)
+* [4. Flask Web App](#flask_web_app)
+* [5. Files Structure](#files_structure)
+* [6. Requirments](#requirments)
+* [7. Running Process](#running_process)
+    * [A. Process Data](#process_data)
+    * [B. Training the classifier](#training_the_classifier)
+    * [C. Run the Flask Web App](#run_the_flask_web_app)
+* [8. Conclusion](#conclusion)
+* [9. Acknowledgements](#acknowledgements)
 
 ***
 <a id=project_overview></a>
