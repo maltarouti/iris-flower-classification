@@ -6,16 +6,30 @@
 ***
 
 ## 1. Project Overview 
+In this project, we will analyze the iris flower dataset, which has three species: Setosa, Versicolor and Virginica. Each flower class has around 50 records in the dataset. The main goal of this project is to create a classification model that uses the length and width measurements of the sepal and petal to categorize new flowers.
 
 ## 2. The Iris Flower Dataset 
 
 ### A. Dataset Source 
+The Iris flower dataset was taken from [Kaggle](https://www.kaggle.com/arshid/iris-flower-dataset) as a comma-separated values (CSV), and it contains a set of 150 records under 5 attributes - Petal Length, Petal Width, Sepal Length, Sepal width and Class(Species).
 
-### B. Data Exploration and Data Visualization 
+### B. Data Exploration and Data Visualization
+The data exploration and data visualization were done inside the `/data/process_data.ipynb`, but here are some of the findings:
 
-## 2. Machine Learning Model 
+... photo here ...
+As seen above, there are almost 50 records of each flower class in the dataset
+
+... photo here ...
+As it shown above, the sepal range is between 4.3cm and 7.9cm in length and 2.0cm and 4.4cm in width. But the petal range is between 1.0cm and 6.9cm in length and 0.1cm and 2.5cm in width.
+
+The chart also shows that Virginica has the longest sepal length which may reach 7.9cm, as opposed to Setosa, which has a range of 4.3cm to 5.8cm. On the other hand, Setosa has the widest sepals at 4.4cm and Virginica has the highest petal length and width.
+
+## 2. Machine Learning Model
+The machine learning model was trained on the Iris flower dataset using The [scikit learn](https://scikit-learn.org/stable/) Python library. The model is [Logistic Regression](https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LogisticRegression.html), which is an excellent classifier since it applies the one-vs-rest principle to this multi-class situation.
 
 ## 3. Flask Web App
+The Flask Web App allows the user to use the trained model to make predictions on new flowers and find their species easily
+... photo here ... 
 
 ## 4. Files Structure
 ```
@@ -51,7 +65,7 @@ pip3 install -r requirments.txt
 This secions explains how to run each part of this project using the command prompt or terminal
 
 ### A. Process Data
- Data Exploration and Data Visualization have been done in `process_data.ipynb` file which is inside the data folder
+To look at the data exploration and data visualization, please open `/data/process_data.ipynb` with [Jupyter Notebook](https://jupyter.org/).
 
 ### B. Training the classifier
 To re-train the classifier, you must go inside the `models` directory using the terminal or the command prompt and run the following:
