@@ -34,25 +34,32 @@ def split_dataset(dataset):
     x_train, x_test, y_train, y_test = train_test_split(x, y, test_size=0.2)
     return x_train, x_test, y_train, y_test
 
-def build_mode():
+def train_model(x_train, y_train):
     """
     Builds a model using the training dataset and returns the model.
     :return: Model.
     """
-
+    # Create the model
     model = LogisticRegression()
 
+    # Create the hyperparameter grid
     parameters = {
         'C': [0.1, 1, 10, 100],
         'penalty': ['l1', 'l2', 'elasticnet'],
         'solver': ['lbfgs', 'liblinear'],
-        'max_iter': [100, 500],
+        'max_iter': [100, 500]
     }
 
-    model = GridSearchCV(model, parameters, cv=5, scoring='accuracy',)
+    # Create the grid search
+    grid_search = GridSearchCV(model, parameters, cv=5, scoring='accuracy')
 
+    # Fitting the grid search
+    grid_search.fit(x_train, y_train)
+    
+    # Print the best parameters
+    print('Best parameters: {}'.format(grid_search.best_params_))
 
-    return model
+    return grid_search
 
 def evaluate_model(model, x_test, y_test):
     """
@@ -65,6 +72,7 @@ def evaluate_model(model, x_test, y_test):
     y_pred = model.predict(x_test)
     accuracy = accuracy_score(y_test, y_pred)
     print('Accuracy: {}'.format(accuracy))
+    
     
 def save_model(model, filename):
     """
@@ -91,10 +99,8 @@ def main():
         dataset = load_data(database_path)
         print('Splitting data...')
         x_train, x_test, y_train, y_test = split_dataset(dataset)
-        print('Building model...')
-        model = build_mode()
         print('Training model...')
-        model.fit(x_train, y_train)
+        model = train_model(x_train, y_train)
         print('Evaluating model...')
         evaluate_model(model, x_test, y_test)
         print('Saving model...\n    MODEL: {}'.format(model_path))
