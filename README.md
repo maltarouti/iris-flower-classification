@@ -8,6 +8,9 @@
 ## 1. Project Overview 
 In this project, we will analyze the iris flower dataset, which has three species: Setosa, Versicolor and Virginica. Each flower class has around 50 records in the dataset. The main goal of this project is to create a classification model that uses the length and width measurements of the sepal and petal to categorize new flowers.
 
+![image](https://github.com/Murtada-Altarouti/Iris-flower-classification/blob/main/images/flower.jpg)
+
+
 ## 2. The Iris Flower Dataset 
 
 ### A. Dataset Source 
