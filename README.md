@@ -17,9 +17,11 @@ The Iris flower dataset was taken from [Kaggle](https://www.kaggle.com/arshid/ir
 The data exploration and data visualization were done inside the `/data/process_data.ipynb`, but here are some of the findings:
 
 ![image](https://github.com/Murtada-Altarouti/Iris-flower-classification/blob/main/images/dataset.png)
+
 As seen above, there are almost 50 records of each flower class in the dataset
 
 ![image](https://github.com/Murtada-Altarouti/Iris-flower-classification/blob/main/images/values.png)
+
 As it shown above, the sepal range is between 4.3cm and 7.9cm in length and 2.0cm and 4.4cm in width. But the petal range is between 1.0cm and 6.9cm in length and 0.1cm and 2.5cm in width.
 
 The chart also shows that Virginica has the longest sepal length which may reach 7.9cm, as opposed to Setosa, which has a range of 4.3cm to 5.8cm. On the other hand, Setosa has the widest sepals at 4.4cm and Virginica has the highest petal length and width.
