@@ -23,6 +23,15 @@ In this project, we will analyze the iris flower dataset, which has three specie
 
 ![image](https://github.com/Murtada-Altarouti/Iris-flower-classification/blob/main/images/flower.jpg)
 
+## 2. Problem Statement 
+Identifying Iris Flowers by eyes and especially for non-experts is a difficult job, but machine learning algorithms make it much easier to classify any flower with high accuracy. This is a classification problem which the model attempts to determine if the flower was Setosa, Versicolor, or Virginica. In this project, we are going to use [Logistic Regression](https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LogisticRegression.html) from the scikit-learn library.
+
+## 3. Metrics
+In the evaluation process, we are going to use the accuracy score metrics to get an overview on the model performance, which is the number of correctly classified data instances over the total number of data instances.
+
+![image](https://github.com/Murtada-Altarouti/Iris-flower-classification/blob/main/images/formula.png)
+
+
 <a id=the_iris_flower_dataset></a>
 ## 2. The Iris Flower Dataset 🌸
 
@@ -45,8 +54,43 @@ As it shown above, the sepal range is between 4.3cm and 7.9cm in length and 2.0c
 The chart also shows that Virginica has the longest sepal length which may reach 7.9cm, as opposed to Setosa, which has a range of 4.3cm to 5.8cm. On the other hand, Setosa has the widest sepals at 4.4cm and Virginica has the highest petal length and width.
 
 <a id=machine_learning_model></a>
-## 3. Machine Learning Model 📜
+## 3. Methodology 📜
 The machine learning model was trained on the Iris flower dataset using The [scikit learn](https://scikit-learn.org/stable/) Python library. The model is [Logistic Regression](https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LogisticRegression.html), which is an excellent classifier since it applies the one-vs-rest principle to this multi-class situation. We also used the [accuracy score](https://scikit-learn.org/stable/modules/generated/sklearn.metrics.accuracy_score.html) metrics to calculate the model accuracy in general 
+
+### A. Data Preprocessing
+The data preprocessing was done inside the `/data/process_data.ipynb` using Pandas library. There was only one step which is encoding the classes from strings to numbers since computers deal with numbers better than anything.
+
+### B. Implementation
+The implementation of algorthims and techniques was done by using the [scikit-learn](https://scikit-learn.org/) library. This procedure consists of five phases, which are as follows: 
+   i. Loading the data as a pandas dataframe from the database
+   ii. Spliting the dataset to train and test using [train test split](https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.train_test_split.html) function
+   iii. building and training the logistic regression model
+   iv. Evaluating the model using the [accuracy score](https://scikit-learn.org/stable/modules/generated/sklearn.metrics.accuracy_score.html?highlight=accuracy%20score#sklearn.metrics.accuracy_score)
+   v. Saving the model as a pickle file 
+
+### C. Refinement
+In this project, GridSearchCV was used which is an exhaustve search over specified parameter values for an estimator. The following are the hyperparameters that was givento the grid search:
+```python
+ parameters = {
+     'C': [0.1, 1, 10, 100],
+     'penalty': ['l1', 'l2', 'elasticnet'],
+     'solver': ['lbfgs', 'liblinear'],
+     'max_iter': [100, 500]
+ }
+```
+The GridSearchCV found the following as the best hyperparameters where the model has reached 96% accuracy score
+```python
+Best parameters: {'C': 10, 'max_iter': 100, 'penalty': 'l2', 'solver': 'lbfgs'}
+```
+
+
+
+## n. Results
+### A. Model Evaluation and Validation
+...
+
+### B. Justification
+...
 
 <a id=flask_web_app></a>
 ## 4. Flask Web App 🌐
@@ -102,13 +146,13 @@ python3 train_classifier.py ../data/<database_name>.db <model_name>.pkl
 ### C. Run the Flask Web App 🌐
 To run the web app, you must go inside the `app` directory using the terminal or the command prompt and run the following:
 ```shell
-python3 run.py
+python3 app.py
 ```
 The link of the website will be `0.0.0.0:3001`
 
 <a id=conclusion></a>
 ## 8. Conclusion 👋
-We conclude that it may be difficult for non-experts to identify iris flower species, machine learning makes it much easier to find out the flower class with 94% accuracy. In the future, we can try to develop a deep learning model utilizing neural networks, which may yield even better and more accurate results. Also, feel free to fork this repositry and try to improve the solution. 
+We conclude that it may be difficult for non-experts to identify iris flower species, machine learning makes it much easier to find out the flower class with 96% accuracy. In the future, we can try to develop a deep learning model utilizing neural networks, which may yield even better and more accurate results. Also, feel free to fork this repositry and try to improve the solution. 
 
 <a id=acknowledgements></a>
 ## 9. Acknowledgements ❤️
