@@ -170,7 +170,7 @@ In conclusion, classifying iris flower species may be a challenging task, especi
 
 <a id=improvements></a>
 ## 12. Improvements 🆙
-We are proud of our solution because it achieved such high accuracy, but there is always room for improvement. In the future, we can attempt to create a deep learning model using neural networks and deep learning techniques, which may yield even better and more accurate results. You are also welcome to fork this repository and try to enhance the solution on your own.
+We are proud of our solution because it achieved such high accuracy, but there is always room for improvement. In the future, we can attempt to create a deep learning model using neural networks, which may yield even better and more accurate results. You are also welcome to fork this repository and try to enhance the solution on your own.
 
 <a id=acknowledgements></a>
 ## 13. Acknowledgements ❤️
