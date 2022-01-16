@@ -97,7 +97,7 @@ In this project, GridSearchCV was used which is an exhaustve search over specifi
 
 <a id=evaluation></a>
 ### A. Model Evaluation and Validation 🪄
-The model evaluation was calculated using the [accuracy score](https://scikit-learn.org/stable/modules/generated/sklearn.metrics.accuracy_score.html?highlight=accuracy%20score#sklearn.metrics.accuracy_score) and since the GridSearchCV used the cross validation of 5 to search for the best model possible using the given parameters,it identified the following as the optimal hyperparameters for the robust model which achieved 96% accuracy score:
+The model evaluation was calculated using the [accuracy score](https://scikit-learn.org/stable/modules/generated/sklearn.metrics.accuracy_score.html?highlight=accuracy%20score#sklearn.metrics.accuracy_score) and because the GridSearchCV used the cross validation of five folds to search for the best model possible using the given parameters, it identified the following as the optimal hyperparameters for the robust model that achieved 96% accuracy score:
 ```python
 Best parameters: {'C': 10, 'max_iter': 100, 'penalty': 'l2', 'solver': 'lbfgs'}
 ```
