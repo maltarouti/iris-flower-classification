@@ -22,7 +22,8 @@
     * [B. Training the classifier](#training_the_classifier)
     * [C. Run the Flask Web App](#run_the_flask_web_app)
 * [11. Conclusion](#conclusion)
-* [12. Acknowledgements](#acknowledgements)
+* [12. Improvements](#improvements)
+* [13. Acknowledgements](#acknowledgements)
 
 ***
 <a id=project_overview></a>
@@ -68,7 +69,7 @@ The machine learning model was trained on the Iris flower dataset using The [sci
 
 <a id=data_preprocessing></a>
 ### A. Data Preprocessing 🗃️
-The data preprocessing was done inside the `/data/process_data.ipynb` using Pandas library. There was only one step which is encoding the classes from strings to numbers since computers deal with numbers better than anything.
+The data preprocessing was done inside the `/data/process_data.ipynb` using Pandas library. There was only one step which is encoding by using [Label Encoder](https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.LabelEncoder.html?highlight=labelencoder#sklearn.preprocessing.LabelEncoder) from [scikit-learn](https://scikit-learn.org/) and it converted the flower classes (Setosa, Versicolor and Virginica) to (1, 2 and 3). This process is important because computers deal with numbers better than anything else. 
 
 <a id=implementation></a>
 ### B. Implementation 📋
@@ -96,7 +97,7 @@ In this project, GridSearchCV was used which is an exhaustve search over specifi
 
 <a id=evaluation></a>
 ### A. Model Evaluation and Validation 🪄
-The model evaluation was calculated using the [accuracy score](https://scikit-learn.org/stable/modules/generated/sklearn.metrics.accuracy_score.html?highlight=accuracy%20score#sklearn.metrics.accuracy_score) and the GridSearchCV identified the following as the optimal hyperparameters for which the model achieved a 96% accuracy score.
+The model evaluation was calculated using the [accuracy score](https://scikit-learn.org/stable/modules/generated/sklearn.metrics.accuracy_score.html?highlight=accuracy%20score#sklearn.metrics.accuracy_score) and since the GridSearchCV used the cross validation of 5 to search for the best model possible using the given parameters,it identified the following as the optimal hyperparameters for the robust model which achieved 96% accuracy score:
 ```python
 Best parameters: {'C': 10, 'max_iter': 100, 'penalty': 'l2', 'solver': 'lbfgs'}
 ```
@@ -165,8 +166,12 @@ The link of the website will be `0.0.0.0:3001`
 
 <a id=conclusion></a>
 ## 11. Conclusion 👋
-We conclude that it may be difficult for non-experts to identify iris flower species, machine learning makes it much easier to find out the flower class with 96% accuracy. In the future, we can try to develop a deep learning model utilizing neural networks, which may yield even better and more accurate results. Also, feel free to fork this repositry and try to improve the solution. 
+In conclusion, classifying iris flower species may be a challenging task, especially for non-experts, but machine learning algorithms make it much easier to determine the flower class. This project designed a basic but strong machine learning model based on the logistic regression algorithm from the scikit-learn python library. We also ensured that we got the best model possbile by using the gridsearch functionality to get the golden model. 
+
+<a id=improvements></a>
+## 12. Improvements 🆙
+We are proud of our solution because it achieved such high accuracy, but there is always room for improvement. In the future, we can attempt to create a deep learning model using neural networks and deep learning techniques, which may yield even better and more accurate results. You are also welcome to fork this repository and try to enhance the solution on your own.
 
 <a id=acknowledgements></a>
-## 12. Acknowledgements ❤️
+## 13. Acknowledgements ❤️
 I would like to express my appreciation to [Misk Academy](https://misk.org.sa/en/) and [Udacity](https://www.udacity.com/) for the amazing work on the data science course and the support they give us to build this project
