@@ -37,7 +37,7 @@ Identifying Iris Flowers by eyes and especially for non-experts is a difficult j
 
 <a id=metrics></a>
 ## 3. Metrics 🧮
-In the evaluation process, we are going to use the accuracy score metrics to get an overview on the model performance, which is the number of correctly classified data instances over the total number of data instances.
+In the evaluation process, we are going to use the [accuracy score](https://scikit-learn.org/stable/modules/generated/sklearn.metrics.accuracy_score.html) metrics to get an overview on the model performance, which is the number of correctly classified data instances over the total number of data instances. The accuracy score is used above other performance metrics since we want to know how the model performs in general because we don't care much about the specificity or sensitivity in this situation.
 
 ![image](https://github.com/Murtada-Altarouti/Iris-flower-classification/blob/main/images/formula.png)
 
