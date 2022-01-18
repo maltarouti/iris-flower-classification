@@ -138,7 +138,7 @@ The Flask Web App allows the user to use the trained model to make predictions o
 
 <a id=requirments></a>
 ## 9. Requirments 📑
-In order to to run this project, you must have [Python3](https://www.python.org/) installed on your machine. You also must have all listed libraries inside the `requirments.txt` so run the following command to install them: 
+In order to run this project, you must have [Python3](https://www.python.org/) installed on your machine. You also must have all listed libraries inside the `requirments.txt` so run the following command to install them: 
 ```
 pip3 install -r requirments.txt
 ```
