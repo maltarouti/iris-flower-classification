@@ -23,6 +23,7 @@ def load_data(database_path):
     dataset = pd.read_sql_table('dataset', engine)
     return dataset
 
+
 def split_dataset(dataset):
     """
     Splits the dataset into training and test sets.
@@ -33,6 +34,7 @@ def split_dataset(dataset):
     y = dataset.iloc[:, 4]
     x_train, x_test, y_train, y_test = train_test_split(x, y, test_size=0.2)
     return x_train, x_test, y_train, y_test
+
 
 def train_model(x_train, y_train):
     """
@@ -55,11 +57,12 @@ def train_model(x_train, y_train):
 
     # Fitting the grid search
     grid_search.fit(x_train, y_train)
-    
+
     # Print the best parameters
     print('Best parameters: {}'.format(grid_search.best_params_))
 
     return grid_search
+
 
 def evaluate_model(model, x_test, y_test):
     """
