@@ -1,10 +1,14 @@
-import pickle 
-from flask import Flask, render_template, request, redirect, url_for, flash
+import pickle
+
+from flask import Flask
+from flask import render_template
+from flask import request
+from flask import flash
 
 model_name = 'model.pkl'
 
 with open("../models/{}".format(model_name), 'rb') as f:
-        model = pickle.load(f)
+    model = pickle.load(f)
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'secret'
@@ -28,11 +32,12 @@ def predict():
             sepal_width = float(data['sepal_width'])
             petal_length = float(data['petal_length'])
             petal_width = float(data['petal_width'])
-        except:
+        except Exception:
             return render_template('index.html')
-                
+
         # Make a prediction
-        prediction = model.predict([[sepal_length, sepal_width, petal_length, petal_width]])[0]
+        prediction = model.predict(
+            [[sepal_length, sepal_width, petal_length, petal_width]])[0]
 
         result = ""
         if prediction == 0:
@@ -41,14 +46,13 @@ def predict():
             result = "Iris-versicolor"
         else:
             result = "Iris-virginica"
-        
+
         # Flash the message to the user
         flash("The predicted class is {}".format(result))
 
         # Return the prediction
         return render_template('index.html')
-    
+
 
 if __name__ == "__main__":
     app.run(debug=True, host='0.0.0.0', port=3001)
-    
